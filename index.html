@@ -461,12 +461,12 @@ Free HTML CSS Template
                 </div>
 
                 <div class="contact-form-container">
-    <form class="contact-form" action="https://formspree.io/f/mgoqrvnq" method="POST">
+    <form class="contact-form" id="braContactForm" action="https://formspree.io/f/mgoqrvnq" method="POST">
         <div class="form-group">
             <input type="text" name="name" class="form-input" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-            <input type="email" name="_replyto" class="form-input" placeholder="Your Email" required>
+            <input type="email" name="email" class="form-input" placeholder="Your Email" required>
         </div>
         <div class="form-group">
             <input type="text" name="project_type" class="form-input" placeholder="Project Type" required>
@@ -474,7 +474,15 @@ Free HTML CSS Template
         <div class="form-group">
             <textarea name="message" class="form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
         </div>
-        <button type="submit" class="submit-btn">Send Message</button>
+        <!-- Honeypot spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="submit-btn" id="braSubmitBtn">Send Message</button>
+        <div id="braSuccess" style="display:none; margin-top:1rem; padding:1rem; background:rgba(0,200,100,0.1); border:1px solid rgba(0,200,100,0.4); border-radius:8px; color:#00c864; text-align:center; font-weight:500;">
+            ✅ Message sent! I'll get back to you within 24 hours.
+        </div>
+        <div id="braError" style="display:none; margin-top:1rem; padding:1rem; background:rgba(255,60,60,0.1); border:1px solid rgba(255,60,60,0.4); border-radius:8px; color:#ff3c3c; text-align:center; font-weight:500;">
+            ❌ Something went wrong. Please try again or email jamesgon824@gmail.com directly.
+        </div>
     </form>
 </div>
         </div>
@@ -508,5 +516,45 @@ Free HTML CSS Template
     </footer>
 
     <script src="tooplate-titan-script.js"></script>
+    <script>
+        // ===== SECURE CONTACT FORM (Formspree) =====
+        const braForm      = document.getElementById('braContactForm');
+        const braSubmitBtn = document.getElementById('braSubmitBtn');
+        const braSuccess   = document.getElementById('braSuccess');
+        const braError     = document.getElementById('braError');
+
+        if (braForm) {
+            braForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                braSuccess.style.display = 'none';
+                braError.style.display   = 'none';
+                braSubmitBtn.disabled    = true;
+                braSubmitBtn.textContent = 'Sending…';
+
+                try {
+                    const response = await fetch(braForm.action, {
+                        method:  'POST',
+                        body:    new FormData(braForm),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        braSuccess.style.display = 'block';
+                        braForm.reset();
+                        braSubmitBtn.textContent = 'Message Sent ✓';
+                    } else {
+                        braError.style.display   = 'block';
+                        braSubmitBtn.disabled    = false;
+                        braSubmitBtn.textContent = 'Send Message';
+                    }
+                } catch (err) {
+                    braError.style.display   = 'block';
+                    braSubmitBtn.disabled    = false;
+                    braSubmitBtn.textContent = 'Send Message';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
