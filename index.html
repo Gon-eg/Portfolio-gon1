@@ -3,948 +3,498 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name — Data Analyst & IT Consultant</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-    <style>
-        /* ===== CV SECTION ===== */
-        .cv-section { padding: 6rem 0; }
-        .cv-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 1.25rem;
-            padding: 2.5rem 2.5rem;
-            margin: 3rem 0 1.5rem;
-            flex-wrap: wrap;
-            backdrop-filter: blur(10px);
-            transition: border-color 0.3s;
-        }
-        .cv-card:hover { border-color: rgba(255,255,255,0.25); }
-        .cv-card-left { display: flex; align-items: center; gap: 1.5rem; }
-        .cv-icon { font-size: 3rem; line-height: 1; }
-        .cv-meta h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 0.3rem; }
-        .cv-meta p  { font-size: 0.9rem; opacity: 0.65; margin: 0 0 0.4rem; }
-        .cv-updated { font-size: 0.78rem; opacity: 0.45; }
-        .cv-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .cv-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.6rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, opacity 0.2s;
-            white-space: nowrap;
-        }
-        .cv-btn:hover { transform: translateY(-2px); opacity: 0.88; }
-        .cv-btn-view {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: inherit;
-        }
-        .cv-btn-download {
-            background: linear-gradient(135deg, #6c63ff, #48a8f7);
-            border: none;
-            color: #fff;
-        }
-        .cv-btn-icon { font-size: 1rem; }
-        .cv-note {
-            font-size: 0.82rem;
-            opacity: 0.5;
-            text-align: center;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .cv-note code {
-            background: rgba(255,255,255,0.08);
-            padding: 0.1rem 0.4rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-        }
-        @media (max-width: 640px) {
-            .cv-card { flex-direction: column; align-items: flex-start; padding: 1.75rem; }
-            .cv-actions { width: 100%; }
-            .cv-btn { flex: 1; justify-content: center; }
-        }
-    </style>
+    <title>Bath Research & Analytic - BRA</title>
+    <link rel="stylesheet" href="tooplate-titan-style.css">
+<!--
+
+Tooplate 2147 Titan Folio
+
+https://www.tooplate.com/view/2147-titan-folio
+
+Free HTML CSS Template
+
+-->
+<style>
+/* ===== CV SECTION STYLES ===== */
+.cv-section {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.08) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent, #a78bfa), transparent);
+}
+
+.cv-section-text h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem 0;
+    color: var(--text-primary, #fff);
+}
+
+.cv-section-text p {
+    font-size: 0.9rem;
+    color: var(--text-secondary, rgba(255,255,255,0.65));
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.75rem 1.6rem;
+    background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(167,139,250,0.28));
+    border: 1.5px solid rgba(167,139,250,0.45);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.cv-btn:hover {
+    background: linear-gradient(135deg, rgba(167,139,250,0.32), rgba(167,139,250,0.48));
+    border-color: rgba(167,139,250,0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(167,139,250,0.25);
+    color: #fff;
+    text-decoration: none;
+}
+
+.cv-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Hero CV link  */
+.hero-cv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255,255,255,0.3);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+    letter-spacing: 0.04em;
+}
+
+.hero-cv-link:hover {
+    color: rgba(255,255,255,0.95);
+    border-color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .cv-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
 </head>
 <body>
-
-    <!-- ========== NAVIGATION ========== -->
     <nav id="navbar">
-        <div class="nav-inner">
-            <a href="#home" class="nav-logo">JGB<span class="dot">.</span></a>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">Data. Research. Design</div>
+            </a>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#cv">CV</a></li>
+                <li><a href="#timeline">Journey</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#contact" class="nav-cta">Hire Me</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <div class="mobile-nav" id="mobileNav">
             <ul>
-                <li><a href="#about" class="mob-link">About</a></li>
-                <li><a href="#services" class="mob-link">Services</a></li>
-                <li><a href="#projects" class="mob-link">Projects</a></li>
-                <li><a href="#skills" class="mob-link">Skills</a></li>
-                <li><a href="#experience" class="mob-link">Experience</a></li>
-                <li><a href="#certifications" class="mob-link">Certifications</a></li>
-                <li><a href="#cv" class="mob-link">CV</a></li>
-                <li><a href="#contact" class="mob-link">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#timeline">Journey</a></li>
+                <li><a href="#portfolio">High-Impact Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- ========== HERO ========== -->
     <section id="home" class="hero">
-        <div class="hero-bg">
-            <div class="grid-overlay"></div>
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-            <div class="orb orb-3"></div>
+        <div class="hero-bg-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="geo-shape geo-1"></div>
+            <div class="geo-shape geo-2"></div>
+            <div class="particles">
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+            </div>
         </div>
-        <div class="hero-inner">
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for work
+            <h1>Professional Work </h1>
+            <p class="subtitle">Insights that inform. Designs that inspire.</p>
+            <p>Crafting research experiences with passion and precision</p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="cta-primary">View My Work</a>
+                <a href="#contact" class="cta-secondary">Let's Talk</a>
             </div>
-            <h1 class="hero-title">
-                <span class="line-1">James Gon</span>
-                <span class="line-2">Bath<span class="accent">.</span></span>
-            </h1>
-            <p class="hero-roles">
-                <span class="role active">Data Analyst</span>
-                <span class="divider">·</span>
-                <span class="role">Researcher</span>
-                <span class="divider">·</span>
-                <span class="role">IT Consultant</span>
-                <span class="divider">·</span>
-                <span class="role">Web Designer</span>
-            </p>
-            <p class="hero-desc">
-                Data. Research. Design. — turning raw information into 
-                clear decisions and digital solutions.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn-primary">View My Work</a>
-                <a href="#cv" class="btn-secondary">View My CV</a>
+
+            <!-- Small CV nudge under the CTA buttons -->
+            <div style="margin-top: 1rem;">
+                <a href="https://drive.google.com/file/d/1uNTsdBC_SPzmTEY22K9UolV75LPGyjgg/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hero-cv-link">
+                    📄 View / Download My CV
+                </a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-num">3+</span>
-                    <span class="stat-label">Years Experience</span>
+            
+            <div class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Projects</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num">20+</span>
-                    <span class="stat-label">Projects Done</span>
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num">15+</span>
-                    <span class="stat-label">Clients Served</span>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Clients</span>
                 </div>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="photo-frame">
-                <div class="photo-inner">
-                    <img src="images/about-profile.jpg" alt="Your Name" class="profile-photo" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo')">
-                    <div class="photo-placeholder">
-                        <span>YOUR<br>PHOTO</span>
+    </section>
+
+    <section id="about" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about writing professional research work & data insights</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-intro">
+                    <div class="about-image"></div>
+                    <div class="about-text">
+                        <h3>My Journey</h3>
+                        <p>I'm a results-driven researcher and data analyst with over 5 years of experience turning complex datasets into clear, actionable insights. My expertise spans data analysis, statistical modeling, and evidence-based problem-solving across diverse research domains.</p>
+                        <p>I believe in the power of rigorous methodology, clear data storytelling, and evidence-driven decision-making. When I'm not analyzing data, you can find me exploring emerging research trends, engaging with academic literature, or translating complex findings into compelling narratives.</p>
+
+                        <!-- ===== CV DOWNLOAD SECTION ===== -->
+                        <div class="cv-section">
+                            <div class="cv-section-text">
+                                <h4>📄 Curriculum Vitae</h4>
+                                <p>Want to know more about my experience, education, and skills?<br>Download or view my full CV — always up to date.</p>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1uNTsdBC_SPzmTEY22K9UolV75LPGyjgg/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cv-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                View / Download CV
+                            </a>
+                        </div>
+                        <!-- ===== END CV SECTION ===== -->
+
                     </div>
                 </div>
-                <div class="photo-ring ring-1"></div>
-                <div class="photo-ring ring-2"></div>
-            </div>
-            <div class="floating-card card-1">
-                <span class="card-icon">📊</span>
-                <div>
-                    <strong>Data Analysis</strong>
-                    <small>Python · Excel · SQL</small>
-                </div>
-            </div>
-            <div class="floating-card card-2">
-                <span class="card-icon">🖥️</span>
-                <div>
-                    <strong>IT Support</strong>
-                    <small>Help Desk · Networks</small>
+                
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h4>🎯 Mission</h4>
+                        <p>To deliver rigorous, reliable research and data analysis that empowers organizations and communities to solve real-world challenges.
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4>💡 Vision</h4>
+                        <p>To drive evidence-based change by transforming complex data into meaningful insights that inform smarter decisions.
+                    </div>
                 </div>
             </div>
         </div>
-        </div><!-- end hero-inner -->
     </section>
-    <section id="about" class="about fade-section">
+
+    <section id="skills" class="fade-in">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="section-label">About Me</p>
-                    <h2 class="section-title">The person behind<br>the <span class="accent-text">data & design</span></h2>
-                    <p class="about-body">
-                        I am James Gon Bath — a multi-disciplinary professional with a strong 
-                        foundation in data analytics, environmental research, IT support, and 
-                        web design. I help organizations make sense of their data, solve 
-                        technical problems, and build digital solutions that work.
-                    </p>
-                    <p class="about-body">
-                        With a background spanning industrial chemistry, environmental management, 
-                        and computer science, I bring a uniquely analytical and systematic approach 
-                        to every challenge — from data pipelines to IT infrastructure. Based in Juba, South Sudan.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight">
-                            <span class="h-icon">🎓</span>
-                            <div>
-                                <strong>Education</strong>
-                                <span>BSc (Hons) Industrial Chemistry · MSc Environmental Management</span>
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Combining analytical precision with research-driven insight</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-wrapper">
+                    <div class="skills-visual">
+                        <div class="skills-circle">
+                            <div class="skill-node">
+                                <div class="skill-icon">🎨</div>
+                                <div class="skill-name">Data Analysis & Visualization</div>
+                            </div>
+                            <div class="skill-node">
+                                <div class="skill-icon">⚛️</div>
+                                <div class="skill-name">Statistical Modeling & Interpretation</div>
+                            </div>
+                            <div class="skill-node">
+                                <div class="skill-icon">📱</div>
+                                <div class="skill-name">Research Design & Methodology</div>
+                            </div>
+                            <div class="skill-node">
+                                <div class="skill-icon">⚙️</div>
+                                <div class="skill-name">Qualitative & Quantitative Research</div>
+                            </div>
+                            <div class="skill-node">
+                                <div class="skill-icon">🚀</div>
+                                <div class="skill-name">Data Wrangling & Cleaning</div>
+                            </div>
+                            <div class="skill-node">
+                                <div class="skill-icon">💡</div>
+                                <div class="skill-name">Report Writing & Findings Communication</div>
+                            </div>
+                            <div class="skills-center">⚡</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <h4>Data Analysis & Visualization</h4>
+                            <p>Transforming raw data into clear, actionable insights through compelling visual storytelling</p>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 95%"></div>
                             </div>
                         </div>
-                        <div class="highlight">
-                            <span class="h-icon">📍</span>
-                            <div>
-                                <strong>Location</strong>
-                                <span>Juba, South Sudan</span>
+                        
+                        <div class="skill-item">
+                            <h4>Statistical Modeling</h4>
+                            <p>Applying advanced statistical techniques to uncover patterns, trends, and meaningful relationships in data</p>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 90%"></div>
                             </div>
                         </div>
-                        <div class="highlight">
-                            <span class="h-icon">💼</span>
-                            <div>
-                                <strong>Status</strong>
-                                <span>Open to freelance & full-time opportunities</span>
+                        
+                        <div class="skill-item">
+                            <h4>Research Design & Methodology</h4>
+                            <p>Designing robust research frameworks and applying rigorous methodologies to ensure accurate, reliable outcomes</p>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <h4>Data Wrangling & Cleaning</h4>
+                            <p>Efficiently processing, structuring, and preparing complex datasets for accurate and meaningful analysis</p>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 92%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image-col">
-                    <div class="about-img-wrap">
-                        <img src="images/about-profile.jpg" alt="About" class="about-img" onerror="this.style.display='none'">
-                        <div class="about-img-placeholder">Add Photo</div>
-                        <div class="about-img-accent"></div>
-                    </div>
-                    <div class="about-card-float">
-                        <p class="acf-label">Current Focus</p>
-                        <p class="acf-value">Data Analytics &<br>IT Consulting</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== SERVICES ========== -->
-    <section id="services" class="services fade-section">
+    <section id="timeline" class="fade-in">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">What I Do</p>
-                <h2 class="section-title">Services I Offer</h2>
-                <p class="section-sub">End-to-end solutions across data, research, technology, and design.</p>
+                <h2 class="section-title">My Journey</h2>
+                <p class="section-subtitle">From curious learner to seasoned researcher — here's how I got here</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Data Analysis</h3>
-                    <p>Transform raw data into actionable insights using Python, R, SQL, Power BI, and Excel. Dashboards, reports, and visualizations.</p>
-                    <ul class="service-list">
-                        <li>Data cleaning & wrangling</li>
-                        <li>Statistical analysis</li>
-                        <li>Dashboard development</li>
-                        <li>Data visualization</li>
-                    </ul>
-                </div>
-                <div class="service-card featured">
-                    <div class="service-badge">Most Requested</div>
-                    <div class="service-icon">🔬</div>
-                    <h3>Research & Reporting</h3>
-                    <p>Academic and professional research, surveys, literature reviews, and report writing across various domains.</p>
-                    <ul class="service-list">
-                        <li>Academic research</li>
-                        <li>Survey design & analysis</li>
-                        <li>Literature reviews</li>
-                        <li>Technical report writing</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🖥️</div>
-                    <h3>IT Help Desk</h3>
-                    <p>Technical support, troubleshooting, and IT consultancy for individuals and organizations.</p>
-                    <ul class="service-list">
-                        <li>Hardware & software support</li>
-                        <li>Network troubleshooting</li>
-                        <li>System setup & configuration</li>
-                        <li>IT training & documentation</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌐</div>
-                    <h3>Web Design</h3>
-                    <p>Clean, responsive, and modern websites built from scratch using HTML, CSS, and JavaScript.</p>
-                    <ul class="service-list">
-                        <li>Portfolio & personal sites</li>
-                        <li>Business websites</li>
-                        <li>Responsive & mobile-first</li>
-                        <li>GitHub Pages deployment</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Business Intelligence</h3>
-                    <p>Design and build BI solutions that help businesses track KPIs and make data-driven decisions.</p>
-                    <ul class="service-list">
-                        <li>Power BI / Tableau reports</li>
-                        <li>KPI tracking systems</li>
-                        <li>Database management</li>
-                        <li>Automated reporting</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤝</div>
-                    <h3>IT Consulting</h3>
-                    <p>Strategic technology advice to help organizations align their IT infrastructure with business goals.</p>
-                    <ul class="service-list">
-                        <li>IT needs assessment</li>
-                        <li>Technology roadmaps</li>
-                        <li>Process improvement</li>
-                        <li>Digital transformation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ========== PROJECTS ========== -->
-    <section id="projects" class="projects fade-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Professional Work</p>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-sub">Data. Research. Design. — a selection of my best work.</p>
+            <div class="timeline-controls">
+                <button class="timeline-filter active" data-filter="all">All</button>
+                <button class="timeline-filter" data-filter="education">Education</button>
+                <button class="timeline-filter" data-filter="work">Work</button>
+                <button class="timeline-filter" data-filter="project">Projects</button>
             </div>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="data">Data Analysis</button>
-                <button class="filter-btn" data-filter="research">Research</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
-                <button class="filter-btn" data-filter="it">IT Support</button>
-            </div>
-            <div class="projects-grid">
-                <!-- PROJECT 1 -->
-                <div class="project-card" data-category="data">
-                    <div class="project-img">
-                        <div class="project-img-placeholder">📊</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Power BI</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                        <h3>Sales Performance Dashboard</h3>
-                        <p>Built an interactive sales analytics dashboard tracking KPIs across regions, reducing reporting time by 60%.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link">View Project →</a>
-                            <a href="#" class="proj-link-gh">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PROJECT 2 -->
-                <div class="project-card" data-category="research">
-                    <div class="project-img">
-                        <div class="project-img-placeholder">🔬</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">SPSS</span>
-                            <span class="tag">Survey</span>
-                            <span class="tag">Report</span>
-                        </div>
-                        <h3>Community Needs Assessment</h3>
-                        <p>Conducted a comprehensive needs assessment survey for an NGO, analyzing 500+ responses and delivering policy recommendations.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link">View Report →</a>
-                            <a href="#" class="proj-link-gh">PDF</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PROJECT 3 -->
-                <div class="project-card" data-category="web">
-                    <div class="project-img">
-                        <div class="project-img-placeholder">🌐</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <h3>Business Portfolio Website</h3>
-                        <p>Designed and developed a fully responsive portfolio website for a local business, deployed on GitHub Pages.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link">Live Site →</a>
-                            <a href="#" class="proj-link-gh">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PROJECT 4 -->
-                <div class="project-card" data-category="data">
-                    <div class="project-img">
-                        <div class="project-img-placeholder">📉</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Excel</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                        </div>
-                        <h3>Financial Data Analysis</h3>
-                        <p>Analyzed 3 years of financial data to identify trends and anomalies, supporting budget planning decisions.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link">View Project →</a>
-                            <a href="#" class="proj-link-gh">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PROJECT 5 -->
-                <div class="project-card" data-category="it">
-                    <div class="project-img">
-                        <div class="project-img-placeholder">🖥️</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Help Desk</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">Windows</span>
-                        </div>
-                        <h3>Office IT Infrastructure Setup</h3>
-                        <p>Set up and configured complete IT infrastructure for a 30-person office including network, workstations, and helpdesk system.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link">Case Study →</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PROJECT 6 -->
-                <div class="project-card" data-category="research">
-                    <div class="project-img">
-                        <div class="project-img-placeholder">📄</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Analysis</span>
-                            <span class="tag">Writing</span>
-                        </div>
-                        <h3>Academic Research Paper</h3>
-                        <p>Published research on [Your Topic] covering methodology, data collection, analysis and findings.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link">Read Paper →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ========== SKILLS ========== -->
-    <section id="skills" class="skills fade-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Expertise</p>
-                <h2 class="section-title">Skills & Tools</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h4 class="skill-group-title">📊 Data & Analytics</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Python (Pandas, NumPy)</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>SQL</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Microsoft Excel</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Power BI / Tableau</span><span>75%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>R / SPSS</span><span>70%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h4 class="skill-group-title">🖥️ IT & Technical</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Windows / Linux Admin</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Network Troubleshooting</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Help Desk / ITSM</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Hardware & Software Support</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Microsoft 365 / Google Workspace</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h4 class="skill-group-title">🌐 Web & Design</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>HTML5 & CSS3</span><span>88%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>JavaScript</span><span>72%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Responsive Design</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>GitHub / Git</span><span>78%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h4 class="skill-group-title">🔬 Research</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Qualitative Research</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Quantitative Analysis</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Survey Design (KoBoToolbox)</span><span>88%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Technical Report Writing</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tools badges -->
-            <div class="tools-section">
-                <h4 class="tools-title">Tools & Platforms</h4>
-                <div class="tools-badges">
-                    <span class="tool-badge">Python</span>
-                    <span class="tool-badge">SQL</span>
-                    <span class="tool-badge">Power BI</span>
-                    <span class="tool-badge">Tableau</span>
-                    <span class="tool-badge">Excel</span>
-                    <span class="tool-badge">R</span>
-                    <span class="tool-badge">SPSS</span>
-                    <span class="tool-badge">HTML/CSS</span>
-                    <span class="tool-badge">JavaScript</span>
-                    <span class="tool-badge">GitHub</span>
-                    <span class="tool-badge">VS Code</span>
-                    <span class="tool-badge">KoBoToolbox</span>
-                    <span class="tool-badge">Microsoft 365</span>
-                    <span class="tool-badge">Google Workspace</span>
-                    <span class="tool-badge">Jira</span>
-                    <span class="tool-badge">ServiceNow</span>
-                    <span class="tool-badge">Linux</span>
-                    <span class="tool-badge">Windows Server</span>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-progress"></div>
 
-    <!-- ========== EXPERIENCE ========== -->
-    <section id="experience" class="experience fade-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Career</p>
-                <h2 class="section-title">Work Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item" data-category="education">
+                    <div class="timeline-node">🎓</div>
                     <div class="timeline-content">
-                        <div class="tl-header">
-                            <div>
-                                <h3>Job Title — e.g. Data Analyst</h3>
-                                <p class="tl-company">Company / Organization Name</p>
-                            </div>
-                            <span class="tl-date">2023 — Present</span>
+                        <div class="timeline-year">2024 - 2025</div>
+                        <h3 class="timeline-title">Associate Degree in Computer Science </h3>
+                        <div class="timeline-company">University of the People</div>
+                        <p class="timeline-description">
+                            Graduated with an Associate Degree in Computer Science and a Diploma in Computer Engineering & Maintenance. 
+                            Developed strong foundations in computational thinking, systems analysis, and technical problem-solving principles.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Python & R</span>
+                            <span class="timeline-skill">Data Analysis</span>
+                            <span class="timeline-skill">Data Structures</span>
+                            <span class="timeline-skill">Computer Systems</span>
                         </div>
-                        <p class="tl-desc">Describe your key responsibilities, achievements, and impact in this role. Include measurable outcomes where possible.</p>
-                        <div class="tl-tags">
-                            <span>Python</span><span>SQL</span><span>Power BI</span>
+                        <div class="timeline-achievements">
+                            <div class="timeline-achievement">Consistently top-performing student throughout the program</div>
+                            <div class="timeline-achievement">Completed hands-on technical projects in systems and data analysis</div>
+                            <div class="timeline-achievement">Recognized for strong analytical and problem-solving skills</div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+
+                <div class="timeline-item" data-category="work">
+                    <div class="timeline-node">💼</div>
                     <div class="timeline-content">
-                        <div class="tl-header">
-                            <div>
-                                <h3>IT Help Desk Technician</h3>
-                                <p class="tl-company">Company / Organization Name</p>
-                            </div>
-                            <span class="tl-date">2021 — 2023</span>
+                        <div class="timeline-year">2017 - 2020</div>
+                        <h3 class="timeline-title">Junior Data Analyst</h3>
+                        <div class="timeline-company">Research & Analytics Consultant</div>
+                        <p class="timeline-description">
+                            Began my professional journey supporting data collection, cleaning, and analysis for client research projects.
+                            Gained experience working in collaborative environments and delivering data-driven reports under tight deadlines.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Python</span>
+                            <span class="timeline-skill">Excel</span>
+                            <span class="timeline-skill">Data Cleaning</span>
+                            <span class="timeline-skill">SQL</span>
                         </div>
-                        <p class="tl-desc">Provided technical support to 100+ users, resolved hardware/software issues, managed ticketing system and maintained IT documentation.</p>
-                        <div class="tl-tags">
-                            <span>Help Desk</span><span>Networking</span><span>Windows</span>
+                        <div class="timeline-achievements">
+                             <div class="timeline-achievement">Automated data entry processes, reducing errors by 30%</div>
+                             <div class="timeline-achievement">Contributed to 10+ research reports for diverse clients</div>
+                             <div class="timeline-achievement">Supported senior analysts in quantitative and qualitative studies</div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+
+                <div class="timeline-item" data-category="project">
+                    <div class="timeline-node">🚀</div>
                     <div class="timeline-content">
-                        <div class="tl-header">
-                            <div>
-                                <h3>Research Assistant</h3>
-                                <p class="tl-company">University / Research Institution</p>
-                            </div>
-                            <span class="tl-date">2020 — 2021</span>
+                        <div class="timeline-year">2023</div>
+                        <h3 class="timeline-title">Consultant Works</h3>
+                        <div class="timeline-company">Independent Research Projects</div>
+                        <p class="timeline-description">
+                            Conducted an independent research study analyzing community health trends using publicly available datasets.
+                            Produced a comprehensive report with visualizations highlighting key findings and policy recommendations.
+                        </p>
+                        <div class="timeline-skills">
+                             <span class="timeline-skill">Python</span>
+                             <span class="timeline-skill">Tableau</span>
+                             <span class="timeline-skill">Statistical Analysis</span>
+                             <span class="timeline-skill">Open Refine</span>
+                             <span class="timeline-skill">Report Writing</span>
                         </div>
-                        <p class="tl-desc">Supported research team in data collection, analysis, and report writing across multiple projects.</p>
-                        <div class="tl-tags">
-                            <span>Research</span><span>SPSS</span><span>Report Writing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CERTIFICATIONS ========== -->
-    <section id="certifications" class="certifications fade-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Credentials</p>
-                <h2 class="section-title">Certifications & Education</h2>
-            </div>
-            <div class="certs-grid">
-
-                <!-- EDUCATION -->
-                <div class="cert-card">
-                    <div class="cert-icon">🎓</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Education</span>
-                        <h4>BSc (Hons) Industrial Chemistry</h4>
-                        <p>Bachelor of Science with Honours</p>
-                        <span class="cert-org">University of Juba</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🎓</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Education</span>
-                        <h4>Master of Environmental Management</h4>
-                        <p>Postgraduate Degree</p>
-                        <span class="cert-org">University — In Progress</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">💻</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Education</span>
-                        <h4>Associate Degree in Computer Science</h4>
-                        <p>Expected Graduation 2027</p>
-                        <span class="cert-org">In Progress</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔧</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Diploma</span>
-                        <h4>Computer Engineering & Maintenance</h4>
-                        <p>Diploma in IT Hardware & Systems</p>
-                        <span class="cert-org">Nairobi Aviation College</span>
-                    </div>
-                </div>
-
-                <!-- IBM / edX -->
-                <div class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <div class="cert-info">
-                        <span class="cert-type">IBM · edX · Verified</span>
-                        <h4>AI for Everyone: Master the Basics</h4>
-                        <p>AI0101EN — Verified Certificate</p>
-                        <span class="cert-org">IBM Skills Network · July 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔬</div>
-                    <div class="cert-info">
-                        <span class="cert-type">IBM · edX · Verified</span>
-                        <h4>Introduction to Data Science</h4>
-                        <p>DS0101EN — Verified Certificate</p>
-                        <span class="cert-org">IBM Skills Network · July 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📡</div>
-                    <div class="cert-info">
-                        <span class="cert-type">edX · Verified</span>
-                        <h4>Verizon Skill Forward Orientation</h4>
-                        <p>VSFO01 — Verified Certificate</p>
-                        <span class="cert-org">edX · July 2025</span>
-                    </div>
-                </div>
-
-                <!-- Forage -->
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Job Simulation · Forage</span>
-                        <h4>GenAI Powered Data Analytics</h4>
-                        <p>TATA Consultancy — Job Simulation</p>
-                        <span class="cert-org">Forage · July 2025</span>
-                    </div>
-                </div>
-
-                <!-- Maven Analytics -->
-                <div class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Maven Analytics</span>
-                        <h4>ChatGPT for Data Analytics</h4>
-                        <p>Credential ID: 141706667</p>
-                        <span class="cert-org">Maven Analytics · May 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">⚡</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Maven Analytics · 11.5 CPE</span>
-                        <h4>Power Query, Power Pivot & DAX</h4>
-                        <p>Credential ID: 141679596</p>
-                        <span class="cert-org">Maven Analytics · May 2025</span>
-                    </div>
-                </div>
-
-                <!-- Pragmatic Works -->
-                <div class="cert-card">
-                    <div class="cert-icon">📈</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Pragmatic Works</span>
-                        <h4>Power BI Beginner to Pro Workshop</h4>
-                        <p>Certificate of Completion</p>
-                        <span class="cert-org">Pragmatic Works · April 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📐</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Pragmatic Works</span>
-                        <h4>DAX Functions Workshop</h4>
-                        <p>Certificate of Completion</p>
-                        <span class="cert-org">Pragmatic Works · June 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🗄️</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Pragmatic Works</span>
-                        <h4>Beginner to T-SQL</h4>
-                        <p>Learn with the Nerds — Live Event</p>
-                        <span class="cert-org">Pragmatic Works</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📱</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Pragmatic Works</span>
-                        <h4>App in a Day</h4>
-                        <p>Power Apps — Certificate of Completion</p>
-                        <span class="cert-org">Pragmatic Works</span>
-                    </div>
-                </div>
-
-                <!-- Udemy / Eduta -->
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Udemy</span>
-                        <h4>Advanced Excel Course for Job & Real World</h4>
-                        <p>4.5 hours — Certificate of Completion</p>
-                        <span class="cert-org">Udemy · April 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📗</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Udemy</span>
-                        <h4>Advanced Excel: Shortcuts, Tips & Tricks</h4>
-                        <p>4 hours — Certificate of Completion</p>
-                        <span class="cert-org">Udemy · April 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📋</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Udemy</span>
-                        <h4>Excel for Everyone: Essential Skills</h4>
-                        <p>4 hours — Certificate of Completion</p>
-                        <span class="cert-org">Udemy · May 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🏢</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Udemy</span>
-                        <h4>Professional Diploma in Program Management</h4>
-                        <p>2.5 hours — MTF Institute</p>
-                        <span class="cert-org">Udemy · May 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📉</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Eduta</span>
-                        <h4>Tableau for Beginners: Learn the Basics</h4>
-                        <p>Step by Step — Verified Certificate</p>
-                        <span class="cert-org">Eduta Inc. Canada · July 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📌</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Certificate</span>
-                        <h4>Excel: From Beginner to Expert</h4>
-                        <p>Certificate of Completion</p>
-                        <span class="cert-org">FreeCourse · May 2025</span>
-                    </div>
-                </div>
-
-                <!-- Other mentioned -->
-                <div class="cert-card">
-                    <div class="cert-icon">🗺️</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Certificate</span>
-                        <h4>GIS Pro Tool</h4>
-                        <p>Geographic Information Systems</p>
-                        <span class="cert-org">GIS Certification</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📁</div>
-                    <div class="cert-info">
-                        <span class="cert-type">Certificate</span>
-                        <h4>Project Management</h4>
-                        <p>Professional Certificate</p>
-                        <span class="cert-org">Project Management Institute</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CV / RESUME ========== -->
-    <section id="cv" class="cv-section fade-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">My Resume</p>
-                <h2 class="section-title">Curriculum Vitae</h2>
-                <p class="section-sub">View online or download a copy to your device.</p>
-            </div>
-            <div class="cv-card">
-                <div class="cv-card-left">
-                    <div class="cv-icon">📄</div>
-                    <div class="cv-meta">
-                        <h3>James Gon Bath — CV</h3>
-                        <p>Data Analyst · Researcher · IT Consultant · Web Designer</p>
-                        <span class="cv-updated">Last updated: 2025</span>
-                    </div>
-                </div>
-                <div class="cv-actions">
-                    <!-- Google Drive: replace YOUR_DRIVE_LINK with your actual shared link -->
-                    <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank" rel="noopener" class="cv-btn cv-btn-view">
-                        <span class="cv-btn-icon">👁️</span>
-                        View on Google Drive
-                    </a>
-                    <!-- GitHub / local PDF download -->
-                    <a href="resume.pdf" download="JamesGonBath_CV.pdf" class="cv-btn cv-btn-download">
-                        <span class="cv-btn-icon">⬇️</span>
-                        Download PDF
-                    </a>
-                </div>
-            </div>
-            <p class="cv-note">
-                💡 To update the Google Drive link: upload your CV to Google Drive → right-click → <strong>Share</strong> → set to <em>"Anyone with the link"</em> → copy the link and replace <code>YOUR_GOOGLE_DRIVE_LINK</code> in the HTML.
-            </p>
-        </div>
-    </section>
-
-    <!-- ========== TESTIMONIALS ========== -->
-    <section id="testimonials" class="testimonials fade-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Social Proof</p>
-                <h2 class="section-title">What Clients Say</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Exceptional data analysis work. Delivered clear insights that directly impacted our business decisions. Highly recommended."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">CL</div>
-                        <div>
-                            <strong>Client Name</strong>
-                            <span>Organization / Company</span>
+                        <div class="timeline-achievements">
+                            <div class="timeline-achievement">Analyzed datasets spanning 5,000+ records</div>
+                            <div class="timeline-achievement">Produced actionable insights adopted by a local NGO</div>
+                            <div class="timeline-achievement">Recognized for clarity and depth of findings</div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Resolved all our IT issues quickly and professionally. Great communicator and very knowledgeable about systems and networks."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">CN</div>
-                        <div>
-                            <strong>Client Name</strong>
-                            <span>Organization / Company</span>
+
+                <div class="timeline-item" data-category="work">
+                    <div class="timeline-node">⭐</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023 - 2024</div>
+                        <h3 class="timeline-title">Research & Data Analysis</h3>
+                        <div class="timeline-company">Data Insights Organization</div>
+                        <p class="timeline-description">
+                            Promoted to lead research analysis on large-scale projects. Designed research frameworks, managed datasets,
+                            and delivered evidence-based recommendations to stakeholders and decision-makers.
+                        </p>
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">SPSS</span>
+                            <span class="timeline-skill">Power BI</span>
+                            <span class="timeline-skill">R</span>
+                            <span class="timeline-skill">Databrick</span>
+                            <span class="timeline-skill">AI Tools</span>
+                            <span class="timeline-skill">Research Design</span>
+                        </div>
+                        <div class="timeline-achievements">
+                            <div class="timeline-achievement">Led a team of junior analysts</div>
+                            <div class="timeline-achievement">Improved reporting efficiency by 50%</div>
+                            <div class="timeline-achievement">Delivered insights across major research projects</div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Designed a beautiful, fast website for our organization. Took the time to understand our needs and delivered beyond expectations."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">TH</div>
-                        <div>
-                            <strong>Client Name</strong>
-                            <span>Organization / Company</span>
+
+                <div class="timeline-item" data-category="education">
+                    <div class="timeline-node">🏆</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3 class="timeline-title">Harvard Data Analytics Certificate</h3>
+                        <div class="timeline-company">Harvard University-CS50</div>
+                        <p class="timeline-description">
+                           Completed the Data Analytics Professional Certificate to further strengthen expertise in
+                           data analysis, visualization, and evidence-based decision-making strategies.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Data Analytics</span>
+                            <span class="timeline-skill">Tableau</span>
+                            <span class="timeline-skill">SQL</span>
+                            <span class="timeline-skill">R Programming</span>
+                            <span class="timeline-skill">Communication</span>
+                            <span class="timeline-skill">GIS Tools</span>
+                        </div>
+                        <div class="timeline-achievements">
+                            <div class="timeline-achievement">Completed with distinction</div>
+                            <div class="timeline-achievement">Applied skills to real-world capstone project</div>
+                            <div class="timeline-achievement">Enhanced proficiency in data storytelling</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="work">
+                    <div class="timeline-node">🎯</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024 - Present</div>
+                         <h3 class="timeline-title">Independent Researcher & Data Analyst</h3>
+                         <div class="timeline-company">Independent</div>
+                         <p class="timeline-description">
+                             Providing independent research and data analysis services to individual, organizations, NGOs, and businesses.
+                             Specializing in transforming complex data into clear insights that drive informed decision-making.
+                        </p>
+                        <div class="timeline-skills">
+                           <span class="timeline-skill">Data cleaning</span>
+                            <span class="timeline-skill">Data Analysis</span>
+                            <span class="timeline-skill">Client Reporting</span>
+                            <span class="timeline-skill">Project Management</span>
+                            <span class="timeline-skill">Research Strategy</span>
+                        </div>
+                        <div class="timeline-achievements">
+                             <div class="timeline-achievement">Served 20+ clients across multiple sectors</div>
+                             <div class="timeline-achievement">90% on-time project delivery rate</div>
+                             <div class="timeline-achievement">Delivering data solutions for growing organizations</div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -952,154 +502,182 @@
         </div>
     </section>
 
-    <!-- ========== CONTACT ========== -->
-    <section id="contact" class="contact fade-section">
+    <section id="portfolio" class="fade-in">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Get In Touch</p>
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">A showcase of research and data projects that demonstrate analytical depth and practical impact</p>
+
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image ecommerce"></div>
+                    <div class="portfolio-content">
+                       <h3 class="portfolio-title">Major Data Analysis Dashboard</h3>
+                        <p class="portfolio-description">A comprehensive data analysis project featuring interactive visualizations, trend analysis, and evidence-based recommendations drawn from large-scale health datasets.</p>
+                        <div class="portfolio-tags">
+                            <span class="timeline-skill">Excel</span>
+                            <span class="timeline-skill">OpenRefine</span>
+                            <span class="timeline-skill">Python</span>
+                            <span class="timeline-skill">Tableau</span>
+                            <span class="timeline-skill">R</span>
+                            <span class="timeline-skill">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image analytics"></div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Analytics Dashboard</h3>
+                        <p class="portfolio-description">Interactive data visualization dashboard with real-time updates, custom charts, and advanced filtering capabilities.</p>
+                        <div class="portfolio-tags">
+                         <span class="tag">Python</span>
+                         <span class="tag">Power BI</span>
+                         <span class="tag">SQL</span>
+                         <span class="tag">Statistical Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image music"></div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Survey Data Analysis Report</h3>
+                     <p class="portfolio-description">End-to-end analysis of large-scale survey data, uncovering behavioral patterns and trends through rigorous statistical methods and clear visual storytelling.</p>
+                       <div class="portfolio-tags">
+                     <span class="tag">SPSS</span>
+                     <span class="tag">Excel</span>
+                     <span class="tag">Data Visualization</span>
+                     <span class="tag">Report Writing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <div class="section-header">
                 <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-sub">Have a project or need IT support? I'd love to hear from you.</p>
+                <p class="section-subtitle">Have a research or data challenge? Let's start a conversation</p>
             </div>
-            <div class="contact-grid">
+
+            <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <div class="contact-item">
-                        <span class="ci-icon">📧</span>
-                        <div>
-                            <strong>Email</strong>
-                            <a href="mailto:jamesgon824@gmail.com">jamesgon824@gmail.com</a>
-                        </div>
+                     <h3>Get In Touch</h3>
+                     <p>I'm always open to new research collaborations and data analysis opportunities. Whether you have a specific project in mind or need guidance on your data, I'd love to hear from you.</p>
+                    
+                    <div class="contact-details">
+                        <h4>💼 Available for:</h4>
+                        <ul>
+                             <li>Freelance Research Projects</li>
+                             <li>Full-time Opportunities</li>
+                             <li>Data Consulting & Advisory</li>
+                             <li>Training & Workshops</li>
+                        </ul>
                     </div>
-                    <div class="contact-item">
-                        <span class="ci-icon">📱</span>
-                        <div>
-                            <strong>Phone / WhatsApp</strong>
-                            <a href="tel:+000000000000">+000 000 000 000</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="ci-icon">📍</span>
-                        <div>
-                            <strong>Location</strong>
-                            <span>Your City, Country</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="ci-icon">🔗</span>
-                        <div>
-                            <strong>LinkedIn</strong>
-                            <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/yourusername" target="_blank" class="social-btn">GitHub</a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn">LinkedIn</a>
-                        <a href="mailto:jamesgon824@gmail.com" class="social-btn">Email</a>
+
+                    <div class="contact-details">
+                        <h4>📍 Based in:</h4>
+                        <p>South Sudan, Juba (Open to Remote)</p>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgoqrvnq" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@email.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service...</option>
-                            <option>Data Analysis</option>
-                            <option>Research & Reporting</option>
-                            <option>IT Help Desk Support</option>
-                            <option>Web Design</option>
-                            <option>IT Consulting</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or issue..." required></textarea>
-                    </div>
-                    <!-- Honeypot spam field - hidden from real users -->
-                    <input type="text" name="_gotcha" style="display:none">
-                    <button type="submit" class="btn-primary full-width" id="submitBtn">Send Message →</button>
-                    <p class="form-note" id="formNote">* I typically respond within 24 hours.</p>
-                    <div id="formSuccess" style="display:none; margin-top:1rem; padding:1rem; background:rgba(0,200,100,0.1); border:1px solid rgba(0,200,100,0.3); border-radius:8px; color:#00c864; text-align:center;">
-                        ✅ Message sent! I'll get back to you within 24 hours.
-                    </div>
-                    <div id="formError" style="display:none; margin-top:1rem; padding:1rem; background:rgba(255,60,60,0.1); border:1px solid rgba(255,60,60,0.3); border-radius:8px; color:#ff3c3c; text-align:center;">
-                        ❌ Something went wrong. Please try again or email me directly.
-                    </div>
-                </form>
-            </div>
+
+                <div class="contact-form-container">
+    <form class="contact-form" id="braContactForm" action="https://formspree.io/f/mgoqrvnq" method="POST">
+        <div class="form-group">
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="project_type" class="form-input" placeholder="Project Type" required>
+        </div>
+        <div class="form-group">
+            <textarea name="message" class="form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <!-- Honeypot spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="submit-btn" id="braSubmitBtn">Send Message</button>
+        <div id="braSuccess" style="display:none; margin-top:1rem; padding:1rem; background:rgba(0,200,100,0.1); border:1px solid rgba(0,200,100,0.4); border-radius:8px; color:#00c864; text-align:center; font-weight:500;">
+            ✅ Message sent! I'll get back to you within 24 hours.
+        </div>
+        <div id="braError" style="display:none; margin-top:1rem; padding:1rem; background:rgba(255,60,60,0.1); border:1px solid rgba(255,60,60,0.4); border-radius:8px; color:#ff3c3c; text-align:center; font-weight:500;">
+            ❌ Something went wrong. Please try again or email jamesgon824@gmail.com directly.
+        </div>
+    </form>
+</div>
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
     <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <a href="#home" class="nav-logo">JGB<span class="dot">.</span></a>
-                    <p>Data. Research. Design.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <p class="footer-copy">© 2025 Your Name. Built with HTML, CSS & JS. Hosted on GitHub Pages.</p>
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2026 Bath's Research & Analytics. All rights reserved.
+            </p>
+            <div class="footer-credits">
+                <a href="https://www.tooplate.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link tooplate">
+                    <span class="footer-credit-icon">🎨</span>
+                    <span>Design by James Gon Bath</span>
+                </a>
+                <div class="footer-divider"></div>
+                <a href="https://fonts.google.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
+                    <span class="footer-credit-icon">📝</span>
+                    <span>Google Fonts</span>
+                </a>
+                <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
+                    <span class="footer-credit-icon">📸</span>
+                    <span>Unsplash</span>
+                </a>
+                <a href="https://cdnjs.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
+                    <span class="footer-credit-icon">⚡</span>
+                    <span>CDNJS</span>
+                </a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="tooplate-titan-script.js"></script>
     <script>
         // ===== SECURE CONTACT FORM (Formspree) =====
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn   = document.getElementById('submitBtn');
-        const formSuccess = document.getElementById('formSuccess');
-        const formError   = document.getElementById('formError');
-        const formNote    = document.getElementById('formNote');
+        const braForm      = document.getElementById('braContactForm');
+        const braSubmitBtn = document.getElementById('braSubmitBtn');
+        const braSuccess   = document.getElementById('braSuccess');
+        const braError     = document.getElementById('braError');
 
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function (e) {
-                e.preventDefault(); // stop any default navigation
+        if (braForm) {
+            braForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
 
-                // Reset state
-                formSuccess.style.display = 'none';
-                formError.style.display   = 'none';
-                submitBtn.disabled        = true;
-                submitBtn.textContent     = 'Sending…';
-
-                const formData = new FormData(contactForm);
+                braSuccess.style.display = 'none';
+                braError.style.display   = 'none';
+                braSubmitBtn.disabled    = true;
+                braSubmitBtn.textContent = 'Sending…';
 
                 try {
-                    const response = await fetch(contactForm.action, {
+                    const response = await fetch(braForm.action, {
                         method:  'POST',
-                        body:    formData,
+                        body:    new FormData(braForm),
                         headers: { 'Accept': 'application/json' }
                     });
 
                     if (response.ok) {
-                        formSuccess.style.display = 'block';
-                        formNote.style.display    = 'none';
-                        contactForm.reset();
-                        submitBtn.textContent = 'Message Sent ✓';
+                        braSuccess.style.display = 'block';
+                        braForm.reset();
+                        braSubmitBtn.textContent = 'Message Sent ✓';
                     } else {
-                        formError.style.display = 'block';
-                        submitBtn.disabled      = false;
-                        submitBtn.textContent   = 'Send Message →';
+                        braError.style.display   = 'block';
+                        braSubmitBtn.disabled    = false;
+                        braSubmitBtn.textContent = 'Send Message';
                     }
                 } catch (err) {
-                    formError.style.display = 'block';
-                    submitBtn.disabled      = false;
-                    submitBtn.textContent   = 'Send Message →';
+                    braError.style.display   = 'block';
+                    braSubmitBtn.disabled    = false;
+                    braSubmitBtn.textContent = 'Send Message';
                 }
             });
         }
